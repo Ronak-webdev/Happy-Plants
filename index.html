@@ -151,9 +151,11 @@
         .starter-chips {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
             justify-content: center;
-            max-width: 560px;
+            max-width: 100%;
+            width: 100%;
+            padding: 0 10px;
         }
         .chip {
             background: rgba(255, 255, 255, 0.7);
@@ -161,22 +163,35 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 100px;
-            padding: 8px 16px;
+            padding: 8px 18px;
             font-size: 13px;
             color: var(--ink-mid);
             cursor: pointer;
             transition: all var(--transition);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            white-space: nowrap; /* Keep text on one line */
+            flex-shrink: 0;
         }
         .chip:hover {
             background: var(--white);
             border-color: var(--green-light);
             color: var(--green-deep);
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 20px rgba(46,107,53,.1);
+            box-shadow: 0 10px 24px rgba(46,107,53,0.12);
+        }
+
+        @media (max-width: 480px) {
+            .starter-chips {
+                gap: 6px;
+            }
+            .chip {
+                padding: 6px 14px;
+                font-size: 12px;
+                gap: 6px;
+            }
         }
 
         /* ─── CHAT HISTORY ─── */
