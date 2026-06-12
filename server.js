@@ -19,7 +19,7 @@ app.post('/api/chat', async (req, res) => {
         const { messages, temperature, top_p, max_tokens } = req.body;
         
         const response = await axios.post('https://generativelanguage.googleapis.com/v1beta/openai/chat/completions', {
-            model: 'gemini-2.0-flash', // Most stable, fast, and free Gemini model
+            model: 'gemini-1.5-flash', // Most stable, fast, and free Gemini model
             messages: messages,
             temperature: temperature || 0.7,
             top_p: top_p || 1,
