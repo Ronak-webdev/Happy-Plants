@@ -20,10 +20,10 @@ app.post('/api/chat', async (req, res) => {
         
         // List of best free OpenRouter models to try in order
         const fallbackModels = [
-            'google/gemini-2.0-flash-lite-preview-02-05:free',
             'meta-llama/llama-3.3-70b-instruct:free',
-            'qwen/qwen-2.5-vl-72b-instruct:free',
-            'google/gemini-2.0-pro-exp-02-05:free'
+            'nousresearch/hermes-3-llama-3.1-405b:free',
+            'google/gemma-4-31b-it:free',
+            'qwen/qwen3-coder:free'
         ];
 
         let lastError = null;
